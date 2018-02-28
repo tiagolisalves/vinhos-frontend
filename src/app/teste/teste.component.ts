@@ -19,7 +19,6 @@ export class TesteComponent {
     }
     
     ok(produto: Produto) {
-        this.produto = produto
         console.log(produto)
     }   
 }
