@@ -1,0 +1,36 @@
+<h2 class="titulo-decorado">
+    {{titulo}}
+</h2>
+
+<p>
+    Nome do Produto: {{produto.nome}}
+</p>
+<p>
+    Valor do Produto: {{'R$ ' + produto.valor}}
+</p>
+
+<p>
+    <!-- Precisamos estar aqui com o FormsModule importado, sem isso: Can't bind to 'ngModel' since it isn't a known property of 'input' -->
+    <input type="text" [(ngModel)]="produto.nome" name="nomeProduto">
+    <input type="text" [(ngModel)]="produto.valor" name="valorProduto">
+</p>
+
+<p>
+    É caro? {{caro ? "Sim" : "Não"}}
+</p>
+
+<p>
+    <app-produto-cifrao [valor]="produto.valor" (custaMuito)="caro=$event"></app-produto-cifrao>
+
+</p>
+
+
+<p>
+    <input type="submit" (click)="ok(produto)">
+</p>
+
+<!-- 
+    Renomear app-teste para app-produto
+    Renomear app-teste2 para app-produto-cifrao
+    app-produto-cifrao representa a quantidade de $
+ -->

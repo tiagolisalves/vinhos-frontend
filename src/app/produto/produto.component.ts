@@ -2,13 +2,14 @@ import { Component } from '@angular/core'
 import { Produto } from './produto'
 
 @Component({
-    selector : 'app-teste2', // Se não usarmos no html teremos o erro: The selector "app-teste" did not match any elements
-    templateUrl : './teste.component.html',
-    styleUrls: ['./teste.component.css']
+    selector : 'app-produto', // Se não usarmos no html teremos o erro: The selector "app-teste" did not match any elements
+    templateUrl : './produto.component.html',
+    styleUrls: ['./produto.component.css']
 })
-export class Teste2Component {
+export class ProdutoComponent {
     titulo: string // NoImplicitAny setado como false(default)
     produto: Produto
+    caro: Boolean
 
     constructor() {
         this.titulo = 'Componente de teste'
@@ -19,7 +20,6 @@ export class Teste2Component {
     }
     
     ok(produto: Produto) {
-        this.produto = produto
         console.log(produto)
     }   
 }
