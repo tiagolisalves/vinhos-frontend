@@ -1,0 +1,14 @@
+<table *ngIf="produtos && produtos.length > 0" style="border: 1px solid black">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produto of produtos">
+            <td>{{produto.nome}}</td>
+            <td>{{produto.valor}}</td>
+        </tr>
+    </tbody>
+</table>

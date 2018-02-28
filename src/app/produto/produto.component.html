@@ -26,8 +26,14 @@
 
 
 <p>
-    <input type="submit" value="Log" (click)="log(produto)">
+    <input type="button" value="Adicionar" (click)="adicionar(produto)">
 </p>
+
+<p>
+    <input type="button" value="Remover Todos" (click)="remover()">
+</p>
+
+<app-produto-lista [produtos]="produtos"><app-produto-lista>
 
 <!-- 
     Renomear app-teste para app-produto

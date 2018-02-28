@@ -7,9 +7,14 @@ import { Produto } from './produto'
     styleUrls: ['./produto.component.css']
 })
 export class ProdutoComponent {
+    
     titulo: string // NoImplicitAny setado como false(default)
+    
     produto: Produto
+    
     caro: Boolean
+
+    produtos: [Produto] = [] as [Produto]
 
     constructor() {
         this.titulo = 'Componente de teste'
@@ -19,7 +24,11 @@ export class ProdutoComponent {
         }
     }
     
-    log(produto: Produto) {
-        console.log(produto)
+    adicionar(produto: Produto) {
+        this.produtos.push(Object.assign({}, produto))
     }   
+
+    remover() {
+        this.produtos = [] as [Produto]
+    }
 }
