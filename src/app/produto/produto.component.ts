@@ -19,7 +19,7 @@ export class ProdutoComponent {
         }
     }
     
-    ok(produto: Produto) {
+    log(produto: Produto) {
         console.log(produto)
     }   
 }
