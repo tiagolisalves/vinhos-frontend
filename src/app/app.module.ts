@@ -1,22 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-import { ProdutoComponent } from './produto/produto.component'
-import { ProdutoCifraoComponent } from './produto-cifrao/produto-cifrao.component'
-import { ProdutoListaComponent } from './produto-lista/produto-lista.component'   
+import { NgModule } from '@angular/core'   
 import { FormsModule } from '@angular/forms'
+import { VinhoFormComponent } from './vinho/vinho-form/vinho-form.component'
 
 
 @NgModule({
   declarations: [
-    ProdutoComponent,
-    ProdutoCifraoComponent,
-    ProdutoListaComponent
+    // ProdutoComponent,
+    // ProdutoCifraoComponent,
+    // ProdutoListaComponent
+    VinhoFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ProdutoComponent]
+  bootstrap: [VinhoFormComponent]
 })
 export class AppModule { }
