@@ -1,0 +1,21 @@
+<h2>
+    {{titulo}}
+</h2>
+
+<div>
+    Nome do Produto: {{produto.nome}}
+    Valor do Produto: {{produto.valor}}
+</div>
+
+
+<div>
+    <!-- Precisamos estar aqui com o FormsModule importado, sem isso: Can't bind to 'ngModel' since it isn't a known property of 'input' -->
+    <input type="text" [(ngModel)]="produto.nome" name="nomeProduto">
+    <input type="text" [(ngModel)]="produto.valor" name="valorProduto">
+</div>
+
+<div>
+    <input type="submit" (click)="ok(produto)">
+</div>
+
+<app-teste2></app-teste2>
